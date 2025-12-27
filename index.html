@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prince | Encrip Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#d4af37;
+  --dark:#0b0b0f;
+  --glass:rgba(255,255,255,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.7), rgba(0,0,0,.9)),
+    url(image/bc.png);
+  background-size:cover;
+  background-position:center;
+  color:#eee;
+  overflow-x:hidden;
+}
+
+/* ===== PREMIUM GOLD BANNER ===== */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:95px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 80px;
+  background:linear-gradient(135deg,#f5d76e,#d4af37,#b8962e);
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  animation: slideDown 1s ease;
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.nav-left img{
+  width:55px;
+}
+
+.brand{
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:4px;
+  color:#000;
+}
+
+/* MENU */
+.menu{
+  display:flex;
+  gap:35px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+  position:relative;
+}
+
+.menu a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#000;
+  transition:.3s;
+}
+
+.menu a:hover::after{
+  width:100%;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px;
+  gap:40px;
+}
+
+.hero-text{
+  max-width:600px;
+  animation: fadeLeft 1.2s ease;
+}
+
+.hero-text h1{
+  font-size:64px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:white;
+}
+
+.hero-text h1 span{
+  color:var(--gold);
+  text-shadow:0 0 25px var(--gold);
+}
+
+.hero-text p{
+  margin-top:25px;
+  font-size:22px;
+  line-height:1.7;
+  opacity:.9;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:16px 44px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--gold),#ffd86f);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+  transition:.4s;
+  box-shadow:0 10px 40px rgba(212,175,55,.5);
+  
+}
+
+.btn:hover{
+  transform:translateY(-6px) scale(1.05);
+  box-shadow:0 20px 60px rgba(212,175,55,.7);
+}
+
+/* IMAGE */
+.hero-img{
+  animation: fadeRight 1.2s ease;
+}
+
+.hero-img img{
+  width:280px;
+  border-radius:25px;
+  border:3px solid var(--gold);
+  box-shadow:
+    0 0 30px rgba(212,175,55,.6),
+    0 20px 60px rgba(0,0,0,.8);
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:100px 80px;
+}
+
+.section h2{
+  font-size:42px;
+  margin-bottom:30px;
+  color:var(--gold);
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  cursor: pointer;
+}
+
+.skill-box{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:.4s;
+}
+
+.skill-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+.skill-box h3{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeLeft{
+  from{opacity:0; transform:translateX(-80px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+  from{opacity:0; transform:translateX(80px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes slideDown{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .navbar{
+    padding:0 20px;
+    flex-direction:column;
+    height:auto;
+  }
+
+  .menu{
+    margin:10px 0;
+    gap:20px;
+  }
+
+  .hero{
+    flex-direction:column;
+    padding:60px 20px;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:48px;
+  }
+
+  .section{
+    padding:80px 20px;
+  }
+}
+.txt{
+    font-family: TIMES;
+    font-size: 28px;
+}
+.sk{
+    text-shadow: 0px 0px 10px grey,
+                 0px 0px 20px grey,
+                 0px 0px 40px grey;
+}
+</style>
+</head>
+
+<body>
+
+<!-- GOLD BANNER -->
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="image/prologo-removebg-preview.png" alt="Encrip Logo">
+    <span class="brand">ENCRIP</span>
+  </div>
+
+  <div class="menu">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>PRINCE <span>ENCRIP</span></h1>
+    <p class="txt">
+      Creative Designer & Tech Enthusiast <br>
+      Crafting premium digital experiences with modern design and technology.
+    </p>
+    <a href="" target="_blank" class="btn">View My Projects</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="image/Princuuu.png" alt="Prince">
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2 class="sk">Skills</h2>
+  <div class="skills">
+    <div class="skill-box"><h3>UI / UX</h3><p>Modern interfaces</p></div>
+    <div class="skill-box"><h3>Graphic Design</h3><p>Brand visuals</p></div>
+    <div class="skill-box"><h3>Web Dev</h3><p>HTML & CSS</p></div>
+    <div class="skill-box"><h3>Creative</h3><p>Idea to product</p></div>
+  </div>
+</section>
+
+</body>
+</html>
